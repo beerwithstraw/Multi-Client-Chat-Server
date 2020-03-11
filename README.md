@@ -51,6 +51,6 @@ Enter username: albert
 Welcome to Inter-Satellite Data transfer Connection.
 Enter 'leave' anytime to exit
 You: World
-You: tata
+You: leave
 DISCONNECTED!!
 </pre>
