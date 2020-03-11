@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
                     #get addr of client sending the message
 					i,p=sock.getpeername()
-					if data == "tata":
+					if data == "leave":
 						msg="\r\33[1m"+"\33[31m "+record[(i,p)]+" left the session\33[0m\n"
 						send_to_all(sock,msg)
 						print "Client (%s, %s) is offline" % (i,p)," [",record[(i,p)],"]"
