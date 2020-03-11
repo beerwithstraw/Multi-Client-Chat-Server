@@ -57,7 +57,7 @@ if __name__ == "__main__":
                     #add name and address
 					record[addr]=name
 					print "Client (%s, %s) connected" % addr," [",record[addr],"]"
-					sockfd.send("\33[32m\r\33[1m Welcome to Inter-Satellite Data transfer Connection. \nEnter 'leave' anytime to exit\n\33[0m")
+					sockfd.send("\33[32m\r\33[1m Welcome to Inter-Satellite Data transfer Connection. \n Enter 'leave' anytime to exit\n\33[0m")
 					send_to_all(sockfd, "\33[32m\33[1m\r "+name+" joined the session \n\33[0m")
 					#mClient = str(sockfd.recv(buffer))
 					#L = [mClient]
