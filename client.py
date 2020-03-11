@@ -14,12 +14,12 @@ def main():
         host = sys.argv[1]
 
     port = 5001
-    
+
     #asks for user name
     name=raw_input("\33[34m\33[1m CREATING NEW ID:\n Enter username: \33[0m")
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(2)
-    
+
     # connecting host
     try :
         s.connect((host, port))
@@ -32,10 +32,10 @@ def main():
     display()
     while 1:
         socket_list = [sys.stdin, s]
-        
+
         # Get the list of sockets which are readable
         rList, wList, error_list = select.select(socket_list , [], [])
-        
+
         for sock in rList:
             #incoming message from server
             if sock == s:
@@ -46,7 +46,7 @@ def main():
                 else :
                     sys.stdout.write(data)
                     display()
-        
+
             #user entered a message
             else :
                 msg=sys.stdin.readline()
