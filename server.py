@@ -85,6 +85,10 @@ if __name__ == "__main__":
 
 					else:
 						msg="\r\33[1m"+"\33[35m "+record[(i,p)]+": "+"\33[0m"+data+"\n"
+						with open("DataRecord.txt", "a") as myfile:
+							myfile.write(record[(i,p)])
+						with open("DataRecord.txt", "a") as myfile:
+							myfile.write(": " + data + "\n")						
 						send_to_all(sock,msg)
 
                 #abrupt user exit
